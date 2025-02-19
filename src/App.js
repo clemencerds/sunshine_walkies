@@ -5,7 +5,7 @@ import Results from './components/Results';
 import WeatherApi from './util/WeatherApi';
 
 function App () {
-  
+
 const [location, setLocation] = useState('');
 const [date, setDate] = useState('');
 

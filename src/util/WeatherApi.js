@@ -40,8 +40,21 @@ const WeatherApi = {
             if (jsonResponse.error) {
                 throw new Error (`API error: ${jsonResponse.error.message}`);
             }
-            return jsonResponse;
             
+            return jsonResponse.forecast.forecastday.flatMap(forecastday => forecastday.hour.map(hour => ({
+                time: hour.time,
+                chance_of_rain: hour.chance_of_rain,
+                precip_mm: hour.precip_mm,
+                sunrise: forecastday.astro.sunrise,
+                sunset: forecastday.astro.sunset
+            })))
+                // return jsonResponse.forecast.forecastday.map(forecastday => ({
+                //     sunrise: forecastday.astro.sunrise,
+                //     sunset: forecastday.astro.sunset,
+                //     time: forecastday.hour.time,
+                //     chance_of_rain: forecastday.hour.chance_of_rain
+                // }))
+        
         })
         
     }

@@ -46,7 +46,8 @@ const WeatherApi = {
                 chance_of_rain: hour.chance_of_rain,
                 precip_mm: hour.precip_mm,
                 sunrise: forecastday.astro.sunrise,
-                sunset: forecastday.astro.sunset
+                sunset: forecastday.astro.sunset,
+                temperature: hour.temp_c,
             })))
                 // return jsonResponse.forecast.forecastday.map(forecastday => ({
                 //     sunrise: forecastday.astro.sunrise,

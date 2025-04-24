@@ -27,7 +27,7 @@ const search = () => {
 
   return (
     <div>
-      <h1>Billie's Sunshine Walkies</h1>
+      <h1 className="text-3xl font-bold underline">Billie's Sunshine Walkies</h1>
       <Search 
           location={location} 
           setLocation={setLocation} 
@@ -53,6 +53,8 @@ const search = () => {
           noHeatChecked={noHeatChecked}
           />
       }
+      
+      
     </div>
   )
 }

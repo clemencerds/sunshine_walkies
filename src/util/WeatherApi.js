@@ -26,9 +26,11 @@ const WeatherApi = {
                 sunrise: forecastday.astro.sunrise,
                 sunset: forecastday.astro.sunset,
                 temperature: hour.temp_c,
-            })))
+            })));
+
         })
     }
+    
 };
    
 

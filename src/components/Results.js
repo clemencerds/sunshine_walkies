@@ -1,4 +1,7 @@
 import React, {useState} from 'react';
+import SunshineTimeline from './SunshineTimeline';
+import MyMap from '../util/GoogleMaps';
+
 
 function Results ({results, date, name, lowRainChecked, noColdChecked, noHeatChecked}) {
     
@@ -104,7 +107,7 @@ function Results ({results, date, name, lowRainChecked, noColdChecked, noHeatChe
             
             resultArray.push(`${start?.getHours()}:${start?.getMinutes() > 0 ? start?.getMinutes() : '00'} and ${end?.getHours()}:${end?.getMinutes()  > 0 ? end?.getMinutes() : '00'}`)
             
-            return `Ideally, you and ${name} should take your walkies between ${resultArray.join(" or between ")}.`
+            return `Ideally, you and ${name} should go out between ${resultArray.join(" or between ")}.`
     
             // if(lowRainChecked && !noColdChecked && !noHeatChecked){
             //     if (!sunAndLowRain.length) {
@@ -179,6 +182,7 @@ function Results ({results, date, name, lowRainChecked, noColdChecked, noHeatChe
             <div>
                 <h2>sunrise and sunset times</h2>
                 <p>the sun will rise between {formattedSunriseTime} and {formattedSunsetTime}</p>
+                <SunshineTimeline/>
             </div>
 
             <div>
@@ -192,6 +196,7 @@ function Results ({results, date, name, lowRainChecked, noColdChecked, noHeatChe
                     {noHeatChecked && noColdChecked && !lowRainChecked && timeSlots(sunAndNoColdNoHeat)}
                     {lowRainChecked && noColdChecked && noHeatChecked && timeSlots(sunAndWarmAndLowRain)}
                 </p>
+                {/* <MyMap results={results}/> */}
             </div>
         </div>
     )

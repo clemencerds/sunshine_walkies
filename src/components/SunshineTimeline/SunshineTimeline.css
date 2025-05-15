@@ -1,0 +1,9 @@
+.progress-stacked{
+height: 1.5rem;
+margin-left: 15rem;
+margin-right: 15rem;
+display: flex;
+}
+.progress {
+    height: 100%;
+}

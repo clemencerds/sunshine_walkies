@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
-import SunshineTimeline from './SunshineTimeline';
-import MyMap from '../util/GoogleMaps';
+import SunshineTimeline from '../SunshineTimeline/SunshineTimeline';
+// import MyMap from '../../util/GoogleMaps';
 
 
 function Results ({results, date, name, lowRainChecked, noColdChecked, noHeatChecked}) {

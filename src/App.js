@@ -1,15 +1,16 @@
 import React, {useState} from 'react';
-import './App.css';
-import Search from './components/Search';
-import Results from './components/Results';
-import WeatherApi from './util/WeatherApi';
 import 'bootstrap/dist/css/bootstrap.css';
+import Search from './components/Search/Search';
+import Results from './components/Results/Results';
+import WeatherApi from './util/WeatherApi';
+import './App.css';
+
 
 function App () {
 
 const [location, setLocation] = useState('');
 const [date, setDate] = useState('');
-const [name, setName] = useState('');
+const [name, setName] = useState('your dog');
 
 const [lowRainChecked, setLowRainChecked] = useState(false)
 const [noColdChecked, setNoColdChecked] = useState(false)
@@ -18,7 +19,11 @@ const [isVisible, setIsVisible] = useState(false)
 const [results, setResults] = useState([]);
 
 const search = () => {
+  // if (!location || !date) {
+  //   return
+  // }
   WeatherApi.search({location, date}).then(setResults);
+  
   setIsVisible(true)
 };
 
@@ -26,8 +31,8 @@ const search = () => {
 
 
   return (
-    <div>
-      <h1 className="text-3xl font-bold underline">Billie's Sunshine Walkies</h1>
+    <div className='app'>
+      <h1>Billie's Sunshine Walkies</h1>
       <Search 
           location={location} 
           setLocation={setLocation} 

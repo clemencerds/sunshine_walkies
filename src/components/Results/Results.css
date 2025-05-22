@@ -1,0 +1,10 @@
+.results {
+    background-color:darkslategrey;
+    color: palevioletred;
+    margin-left: 8rem;
+    margin-right: 8rem;
+    margin-top: 5rem;
+    border-radius: 12px;
+    padding: 2rem;
+    text-align: center;
+}

@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import SunshineTimeline from '../SunshineTimeline/SunshineTimeline';
+import './Results.css'
 // import MyMap from '../../util/GoogleMaps';
 
 
@@ -177,16 +178,13 @@ function Results ({results, date, name, lowRainChecked, noColdChecked, noHeatChe
 
 
     return (
-        <div>
-            
+        <div className="results">
             <div>
-                <h2>sunrise and sunset times</h2>
-                <p>the sun will rise between {formattedSunriseTime} and {formattedSunsetTime}</p>
+                <p>on the {date} the sun will rise between {formattedSunriseTime} and {formattedSunsetTime}</p>
                 <SunshineTimeline/>
             </div>
 
             <div>
-                <h2>best walkies according to your criteria</h2>
                 <p>
                     {lowRainChecked && !noColdChecked && !noHeatChecked && timeSlots(sunAndLowRain)}
                     {noColdChecked && !lowRainChecked && !noHeatChecked && timeSlots(sunAndNoCold)}

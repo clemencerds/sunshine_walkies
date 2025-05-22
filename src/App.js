@@ -19,9 +19,9 @@ const [isVisible, setIsVisible] = useState(false)
 const [results, setResults] = useState([]);
 
 const search = () => {
-  // if (!location || !date) {
-  //   return
-  // }
+  if (!location || !date) {
+    return
+  }
   WeatherApi.search({location, date}).then(setResults);
   
   setIsVisible(true)

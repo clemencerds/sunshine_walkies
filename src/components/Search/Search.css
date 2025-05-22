@@ -2,8 +2,8 @@
     background-color:darkblue;
     color: palevioletred;
     display: flex;
-    margin-left: 4rem;
-    margin-right: 4rem;
+    margin-left: 8rem;
+    margin-right: 8rem;
     margin-top: 5rem;
     border-radius: 12px;
     justify-content: space-evenly;
@@ -18,3 +18,18 @@
 #location:invalid {
     border: 2px dashed red;
   }
+
+.preferences {
+    /* border-style: solid;
+    border-radius: 12px;
+    padding: 1rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    border-color: white; */
+}
+
+h2 {
+    font-size: 1.2rem;
+    padding-bottom: 1rem;
+    
+}

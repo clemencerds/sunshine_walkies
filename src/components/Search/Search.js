@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
-import InputGroup from 'react-bootstrap/InputGroup';
+import Row from 'react-bootstrap/Row';
 import './Search.css';
 
 function Search ({location, 
@@ -55,7 +55,7 @@ function Search ({location,
             </Form>
 
             <div className="preferences">
-                <p>My dog's preferences :</p>
+                <h2>My dog's preferences :</h2>
                 {/* <div class="form-check form-switch">
                     <label class="form-check-label">
                         <input class="form-check-input" type="checkbox" role="switch" value="" name="lowRain" checked disabled/>
@@ -64,9 +64,9 @@ function Search ({location,
 
                 <Form className="preferencesForm">
                     <Form.Check type="switch" id="custom-switch-daylight" value="" name="daylight" checked disabled label="I want to go out in the daylight ☀️"/>
-                    <Form.Check type="switch" id="custom-switch" value="" name="lowRain" checked={lowRainChecked} onChange={handleLowRainCheck} label="My dog doesn't like the rain ☔ "/>
-                    <Form.Check type="switch" id="custom-switch" value="" name="noCold" checked={noColdChecked} onChange={handleNoColdCheck} label="My dog is sensitive to cold (min + 4°c / 39°f) ❄️"/>
-                    <Form.Check type="switch" id="custom-switch" value="" name="noHeat" checked={noHeatChecked} onChange={handleNoHeatCheck} label="My dog can't stand heat (max + 25°c / 77°f) 🔥"/>
+                    <Form.Check type="switch" id="custom-switch-lowRain" value="" name="lowRain" checked={lowRainChecked} onChange={handleLowRainCheck} label="My dog doesn't like the rain ☔ "/>
+                    <Form.Check type="switch" id="custom-switch-noCold" value="" name="noCold" checked={noColdChecked} onChange={handleNoColdCheck} label="My dog is sensitive to cold (min + 4°c / 39°f) ❄️"/>
+                    <Form.Check type="switch" id="custom-switch-noHeat" value="" name="noHeat" checked={noHeatChecked} onChange={handleNoHeatCheck} label="My dog can't stand heat (max + 25°c / 77°f) 🔥"/>
                 </Form>
 
                  {/* <div class="form-check form-switch">
@@ -88,7 +88,6 @@ function Search ({location,
                  </div> */}
              </div>
             <Button type='button' variant="outline-light" onClick={search}> Ask Billie !</Button>
-        
         </div>
     );
 };

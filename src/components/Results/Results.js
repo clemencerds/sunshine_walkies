@@ -22,6 +22,9 @@ function Results ({results, date, name, lowRainChecked, noColdChecked, noHeatChe
         let sunsetDate = new Date(`${date} ${formattedSunsetTime}`);
         console.log(sunsetDate)
 
+        //convert HH:MM:SS to HH:MM
+        let shortSunriseTime = formattedSunriseTime.split(":").slice(0,2).join(":");
+        let shortSunsetTime = formattedSunsetTime.split(":").slice(0,2).join(":");
 
     
         //filter hours with <20% chance of rain and convert to Date object
@@ -180,8 +183,8 @@ function Results ({results, date, name, lowRainChecked, noColdChecked, noHeatChe
     return (
         <div className="results">
             <div>
-                <p>on the {date} the sun will rise between {formattedSunriseTime} and {formattedSunsetTime}</p>
-                <SunshineTimeline/>
+                <p>on the {date} the sun will rise between {shortSunriseTime} and {shortSunsetTime}</p>
+                <SunshineTimeline sunrise={shortSunriseTime} sunset={shortSunsetTime}/>
             </div>
 
             <div>

@@ -1,9 +1,41 @@
-.progress-stacked{
-height: 1.5rem;
-margin-left: 15rem;
-margin-right: 15rem;
-display: flex;
-}
-.progress {
+
+.daylight-wrapper {
+    position: relative;
+    width: 100%;
+    margin: 30px 0;
+  }
+  
+  .bar-container {
+    position: relative;
+    display: flex;
+    height: 30px;
+    border-radius: 20px;
+    overflow: visible;
+    border: 1px solid #ccc;
+    background-color: #2c3e50;
+    
+  }
+  
+  .segment {
     height: 100%;
+  }
+  
+  .night {
+    background-color: #2c3e50;
+    border-radius: 20px;
+  }
+  
+  .daylight {
+    background: linear-gradient(to right, #fceabb, #f8b500);
+  }
+  
+  .sunrise-marker,
+.sunset-marker {
+  position: absolute;
+  top: -2rem;
+  font-size: 14px;
+  color: palevioletred;
+  white-space: nowrap;
+  transform: translateX(-50%);
+  z-index: 10;
 }

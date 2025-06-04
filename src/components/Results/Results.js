@@ -183,7 +183,7 @@ function Results ({results, date, name, lowRainChecked, noColdChecked, noHeatChe
     return (
         <div className="results">
             <div>
-                <p>on the {date} the sun will rise between {shortSunriseTime} and {shortSunsetTime}</p>
+                <h2>Your sunshine walkies on the {date} </h2>
                 <SunshineTimeline sunrise={shortSunriseTime} sunset={shortSunsetTime}/>
             </div>
 

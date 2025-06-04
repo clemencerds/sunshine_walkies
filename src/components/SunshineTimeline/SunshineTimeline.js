@@ -1,5 +1,7 @@
 import React from 'react';
 import './SunshineTimeline.css'
+import imgsunrise from './assets/sunrise.png'
+import imgsunset from './assets/sunset.png'
 
 function SunshineTimeline ({ sunrise, sunset }) {
         // const toDecimal = (time) => {
@@ -22,8 +24,8 @@ function SunshineTimeline ({ sunrise, sunset }) {
               <div className="segment daylight" style={{ width: `${daylight}%` }} />
               <div className="segment night" style={{ width: `${postDaylight}%` }} />
 
-              <div className="sunrise-marker" style={{ left: `${preDaylight}%` }}>rise:{sunrise}</div>
-              <div className="sunset-marker" style={{ left: `${preDaylight + daylight}%` }}>set:{sunset}</div>
+              <div className="sunrise-marker" style={{ left: `${preDaylight}%` }}> <img id='imgsun' src={imgsunrise}/> {sunrise}</div>
+              <div className="sunset-marker" style={{ left: `${preDaylight + daylight}%` }}><img id='imgsun' src={imgsunset}/> {sunset}</div>
             </div>
           </div>
         )

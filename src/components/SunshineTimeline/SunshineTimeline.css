@@ -1,8 +1,8 @@
 
 .daylight-wrapper {
     position: relative;
-    width: 100%;
-    margin: 30px 0;
+    width: 80%;
+    margin: 30px auto;
   }
   
   .bar-container {
@@ -12,7 +12,7 @@
     border-radius: 20px;
     overflow: visible;
     /* border: 1px solid #ccc; */
-    background-color: #2c3e50;
+    background-color: #0d2e4d;
     
   }
   
@@ -21,7 +21,7 @@
   }
   
   .night {
-    background-color: #2c3e50;
+    background-color: #0d2e4d;
     border-radius: 20px;
   }
   
@@ -32,16 +32,17 @@
   .sunrise-marker,
 .sunset-marker {
   position: absolute;
-  top: -2rem;
-  font-size: 14px;
-  color: palevioletred;
+  top: -3rem;
+  font-size: 1rem;
+  /* color: palevioletred; */
   white-space: nowrap;
   transform: translateX(-50%);
   z-index: 10;
 }
 
 #imgsun {
-    height: 1.5rem;
+    height: 2.5rem;
     color: #d87093;
-    top:
 }
+
+

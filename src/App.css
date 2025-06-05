@@ -4,11 +4,19 @@ background-color: green;
 } */
 
 body {
-background-color: lightgray;
+/* background-color: rgb(214, 225, 237); */
+/* background-color: rgba(45, 107, 107, 0.295); */
+background: linear-gradient(to bottom, #87CEEB 0%, #ffffff 100%);
+background-repeat: no-repeat;
+
 }
 
 h1 {
     text-align: center;
+    color:#2e6e87;
+    font-variant: small-caps;
 }
 
-
+@media only screen and (max-width: 800px) {
+    
+}

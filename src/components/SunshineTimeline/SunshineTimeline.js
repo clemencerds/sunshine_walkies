@@ -1,7 +1,7 @@
 import React from 'react';
 import './SunshineTimeline.css'
-import imgsunrise from './assets/sunrise.png'
-import imgsunset from './assets/sunset.png'
+import imgsunrise from './assets/sunrise1.png'
+import imgsunset from './assets/sunset1.png'
 
 function SunshineTimeline ({ sunrise, sunset }) {
         // const toDecimal = (time) => {
@@ -9,8 +9,8 @@ function SunshineTimeline ({ sunrise, sunset }) {
         //   return h + m / 60;
         // };
       
-        const sunriseHour = 6;
-        const sunsetHour = 19;
+        const sunriseHour = 5;
+        const sunsetHour = 20;
         const totalHours = 24;
       
         const preDaylight = (sunriseHour / totalHours) * 100;

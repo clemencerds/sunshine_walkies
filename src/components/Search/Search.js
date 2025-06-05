@@ -35,7 +35,7 @@ function Search ({location,
 
     return (
         <div className='search'>
-            <Form noValidate validated={validated}>
+            <Form noValidate validated={validated} className="selection">
                 <Form.Group className="mb-3" controlId="formGroupLocation">
                     <Form.Label>My location *</Form.Label>
                     <Form.Control required name='location' type='text' value={location} onChange={handleLocation}/>
@@ -56,36 +56,12 @@ function Search ({location,
 
             <div className="preferences">
                 <h2>My dog's preferences :</h2>
-                {/* <div class="form-check form-switch">
-                    <label class="form-check-label">
-                        <input class="form-check-input" type="checkbox" role="switch" value="" name="lowRain" checked disabled/>
-                    I want to go out in the daylight ☀️</label>
-                </div> */}
-
                 <Form className="preferencesForm">
                     <Form.Check type="switch" id="custom-switch-daylight" value="" name="daylight" checked disabled label="I want to go out in the daylight ☀️"/>
                     <Form.Check type="switch" id="custom-switch-lowRain" value="" name="lowRain" checked={lowRainChecked} onChange={handleLowRainCheck} label="My dog doesn't like the rain ☔ "/>
                     <Form.Check type="switch" id="custom-switch-noCold" value="" name="noCold" checked={noColdChecked} onChange={handleNoColdCheck} label="My dog is sensitive to cold (min + 4°c / 39°f) ❄️"/>
                     <Form.Check type="switch" id="custom-switch-noHeat" value="" name="noHeat" checked={noHeatChecked} onChange={handleNoHeatCheck} label="My dog can't stand heat (max + 25°c / 77°f) 🔥"/>
                 </Form>
-
-                 {/* <div class="form-check form-switch">
-                     <label class="form-check-label">
-                         <input class="form-check-input" type="checkbox" role="switch" value="" name="lowRain" checked={lowRainChecked} onChange={handleLowRainCheck}/>
-                     My dog doesn't like the rain </label>
-                 </div>
-
-                  <div class="form-check form-switch">
-                     <label class="form-check-label">
-                        <input class="form-check-input" type="checkbox" role="switch" value="" name="noCold" checked={noColdChecked} onChange={handleNoColdCheck}/>
-                     My dog is sensitive to cold (min + 4°c / 39°f) ❄️ </label>
-                 </div>
-
-                 <div class="form-check form-switch">
-                     <label class="form-check-label">
-                         <input class="form-check-input" type="checkbox" role="switch" value="" name="noHeat" checked={noHeatChecked} onChange={handleNoHeatCheck}/>
-                    My dog can't stand heat (max + 25°c / 77°f) 🔥 </label>
-                 </div> */}
              </div>
             <Button type='button' variant="outline-light" onClick={search}> Ask Billie !</Button>
         </div>

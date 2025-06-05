@@ -22,9 +22,13 @@ function Results ({results, date, name, lowRainChecked, noColdChecked, noHeatChe
         let sunsetDate = new Date(`${date} ${formattedSunsetTime}`);
         console.log(sunsetDate)
 
+        
+
         //convert HH:MM:SS to HH:MM
         let shortSunriseTime = formattedSunriseTime.split(":").slice(0,2).join(":");
         let shortSunsetTime = formattedSunsetTime.split(":").slice(0,2).join(":");
+
+        
 
     
         //filter hours with <20% chance of rain and convert to Date object
@@ -111,70 +115,9 @@ function Results ({results, date, name, lowRainChecked, noColdChecked, noHeatChe
             
             resultArray.push(`${start?.getHours()}:${start?.getMinutes() > 0 ? start?.getMinutes() : '00'} and ${end?.getHours()}:${end?.getMinutes()  > 0 ? end?.getMinutes() : '00'}`)
             
-            return `Ideally, you and ${name} should go out between ${resultArray.join(" or between ")}.`
+            return `Ideally, you and ${name} should go out between ${resultArray.join(" or between ")}`
     
-            // if(lowRainChecked && !noColdChecked && !noHeatChecked){
-            //     if (!sunAndLowRain.length) {
-            //         return 'oh no! it will rain all day';
-            //     }
-            //     else {
-            //     return `Your best walkies this day will happen between ${resultArray.join(" and between ")}.`
-            //     };
-            // }
             
-            // if(noColdChecked && !lowRainChecked &&!noHeatChecked){
-            //     if (!sunAndNoCold.length) {
-            //         return 'oh no! it will be cold all day';
-            //     }
-            //     else {
-            //         return `Your best walkies this day will happen between ${resultArray.join(" and between ")}.`
-            //         };
-            // }
-
-            // if (noHeatChecked && !lowRainChecked && !noColdChecked){
-            //     if (!sunAndNoHeat.length) {
-            //         return 'oh no! it will be hot all day';
-            //     }
-            //     else {
-            //         return `Your best walkies this day will happen between ${resultArray.join(" and between ")}.`
-            //         };
-            // }
-
-            // if(lowRainChecked && noColdChecked){
-            //     if (!sunAndNoColdLowRain.length) {
-            //         return 'oh no! it will be cold and/or rainy all day';
-            //     }
-            //     else {
-            //         return `Your best walkies this day will happen between ${resultArray.join(" and between ")}.`
-            //         };
-            // }
-
-            // if(lowRainChecked && noHeatChecked){
-            //     if (!sunAndNoHeatLowRain.length) {
-            //         return 'oh no! it will be hot and/or rainy all day';
-            //     }
-            //     else {
-            //         return `Your best walkies this day will happen between ${resultArray.join(" and between ")}.`
-            //         };
-            // }
-            
-            // if(noHeatChecked && noColdChecked){
-            //     if (!sunAndNoColdNoHeat.length) {
-            //         return 'oh no! it will be cold or hot all day';
-            //     }
-            //     else {
-            //         return `Your best walkies this day will happen between ${resultArray.join(" and between ")}.`
-            //         };
-            // }
-
-            // if(lowRainChecked && noColdChecked && noHeatChecked){
-            //     if(!sunAndWarmAndLowRain.length) {
-            //         return 'oh no! it will be rainy/cold/hot all day';
-            //     }
-            //     else {
-            //         return `Your best walkies this day will happen between ${resultArray.join(" and between ")}.`
-            //     }
-            // }
         }
         
 
@@ -183,7 +126,7 @@ function Results ({results, date, name, lowRainChecked, noColdChecked, noHeatChe
     return (
         <div className="results">
             <div>
-                <h2>Your sunshine walkies on the {date} </h2>
+                <h2 id='resultstitle'>Your sunshine walkies on the {date} </h2>
                 <SunshineTimeline sunrise={shortSunriseTime} sunset={shortSunsetTime}/>
             </div>
 
@@ -197,7 +140,7 @@ function Results ({results, date, name, lowRainChecked, noColdChecked, noHeatChe
                     {noHeatChecked && noColdChecked && !lowRainChecked && timeSlots(sunAndNoColdNoHeat)}
                     {lowRainChecked && noColdChecked && noHeatChecked && timeSlots(sunAndWarmAndLowRain)}
                 </p>
-                {/* <MyMap results={results}/> */}
+                
             </div>
         </div>
     )

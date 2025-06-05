@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/sunshine_walkies/static/css/main.8a24af90.css",
+    "main.js": "/sunshine_walkies/static/js/main.45a2b234.js",
+    "static/js/488.acf8fd52.chunk.js": "/sunshine_walkies/static/js/488.acf8fd52.chunk.js",
+    "index.html": "/sunshine_walkies/index.html",
+    "main.8a24af90.css.map": "/sunshine_walkies/static/css/main.8a24af90.css.map",
+    "main.45a2b234.js.map": "/sunshine_walkies/static/js/main.45a2b234.js.map",
+    "488.acf8fd52.chunk.js.map": "/sunshine_walkies/static/js/488.acf8fd52.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8a24af90.css",
+    "static/js/main.45a2b234.js"
+  ]
+}

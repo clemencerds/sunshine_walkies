@@ -57,10 +57,10 @@ function Search ({location,
             <div className="preferences">
                 <h2>My dog's preferences :</h2>
                 <Form className="preferencesForm">
-                    <Form.Check type="switch" id="custom-switch-daylight" value="" name="daylight" checked disabled label="I want to go out in the daylight ☀️"/>
-                    <Form.Check type="switch" id="custom-switch-lowRain" value="" name="lowRain" checked={lowRainChecked} onChange={handleLowRainCheck} label="My dog doesn't like the rain ☔ "/>
-                    <Form.Check type="switch" id="custom-switch-noCold" value="" name="noCold" checked={noColdChecked} onChange={handleNoColdCheck} label="My dog is sensitive to cold (min + 4°c / 39°f) ❄️"/>
-                    <Form.Check type="switch" id="custom-switch-noHeat" value="" name="noHeat" checked={noHeatChecked} onChange={handleNoHeatCheck} label="My dog can't stand heat (max + 25°c / 77°f) 🔥"/>
+                    <Form.Check className="custom-switch" type="switch" id="custom-switch-daylight" value="" name="daylight" checked disabled label="I want to go out in the daylight ☀️"/>
+                    <Form.Check className="custom-switch" type="switch" id="custom-switch-lowRain" value="" name="lowRain" checked={lowRainChecked} onChange={handleLowRainCheck} label="My dog doesn't like the rain ☔ "/>
+                    <Form.Check className="custom-switch" type="switch" id="custom-switch-noCold" value="" name="noCold" checked={noColdChecked} onChange={handleNoColdCheck} label="My dog is sensitive to cold (min + 4°c / 39°f) ❄️"/>
+                    <Form.Check className="custom-switch" type="switch" id="custom-switch-noHeat" value="" name="noHeat" checked={noHeatChecked} onChange={handleNoHeatCheck} label="My dog can't stand heat (max + 25°c / 77°f) 🔥"/>
                 </Form>
              </div>
             <Button type='button' variant="outline-light" onClick={search}> Ask Billie !</Button>

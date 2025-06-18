@@ -26,6 +26,7 @@ function Results ({results, date, name, lowRainChecked, noColdChecked, noHeatChe
 
         //convert HH:MM:SS to HH:MM
         let shortSunriseTime = formattedSunriseTime.split(":").slice(0,2).join(":");
+        console.log(shortSunriseTime);
         let shortSunsetTime = formattedSunsetTime.split(":").slice(0,2).join(":");
 
         
@@ -115,7 +116,7 @@ function Results ({results, date, name, lowRainChecked, noColdChecked, noHeatChe
             
             resultArray.push(`${start?.getHours()}:${start?.getMinutes() > 0 ? start?.getMinutes() : '00'} and ${end?.getHours()}:${end?.getMinutes()  > 0 ? end?.getMinutes() : '00'}`)
             
-            return `Ideally, you and ${name} should go out between ${resultArray.join(" or between ")}`
+            return `Ideally, you and ${name} should go out between ${resultArray.join(" OR between ")}`
     
             
         }

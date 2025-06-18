@@ -4,11 +4,6 @@ import imgsunrise from './assets/sunrise1.png'
 import imgsunset from './assets/sunset1.png'
 
 function SunshineTimeline ({ sunrise, sunset }) {
-        // const toDecimal = (time) => {
-        //   const [h, m] = time.split(":").map(Number);
-        //   return h + m / 60;
-        // };
-      
         const sunriseHour = 5;
         const sunsetHour = 20;
         const totalHours = 24;

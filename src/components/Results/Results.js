@@ -8,18 +8,18 @@ function Results ({results, date, name, lowRainChecked, noColdChecked, noHeatChe
     
         //Convert sunrise and sunset times to Date object
         function convertToDate(timeString) {
-            let euroDate = new Date(`${date}T${timeString}`);
+            let euroDate = new Date(`${date} ${timeString}`);
             let formattedTime = euroDate.toLocaleTimeString('en-US', {hour12: false});
             return formattedTime;
         } 
         let sunriseTime = results?.[0]?.sunrise;
         let formattedSunriseTime = convertToDate(sunriseTime);
-        let sunriseDate = new Date(`${date}T${formattedSunriseTime}`);
+        let sunriseDate = new Date(`${date} ${formattedSunriseTime}`);
         console.log(sunriseDate);
     
         let sunsetTime = results?.[0]?.sunset;
         let formattedSunsetTime = convertToDate(sunsetTime);
-        let sunsetDate = new Date(`${date}T${formattedSunsetTime}`);
+        let sunsetDate = new Date(`${date} ${formattedSunsetTime}`);
         console.log(sunsetDate)
 
         

@@ -1,12 +1,10 @@
 import React, {useState} from 'react';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
-import Row from 'react-bootstrap/Row';
 import dogDay from './Assets/dogDay.png'
 import dogRain from './Assets/dogRain.png'
 import dogSnow from'./Assets/dogSnow.png'
 import dogSun from './Assets/dogSun.png'
-import beagle from './Assets/beagle.png'
 import './Search.css'
 
 function Search ({location, 
@@ -26,8 +24,6 @@ function Search ({location,
     const handleNoHeatCheck = () => setNoHeatChecked(!noHeatChecked);
     const [validated, setValidated] = useState(false);
 
-    // const [billie, setBillie] = useState('Ask Billie !');
-    // const handleBillie = (e) => setBillie(<img id="askBillie" src={beagle}/>);
 
     const search = (event) => {
         
@@ -46,6 +42,7 @@ function Search ({location,
 
     return (
         <div className='search'>
+
             <Form noValidate validated={validated} className="selection">
                 <Form.Group className="mb-3" controlId="formGroupLocation">
                     <Form.Label>My location *</Form.Label>
@@ -68,12 +65,45 @@ function Search ({location,
             <div className="preferences">
                 <h2>My dog's preferences :</h2>
                 <Form className="preferencesForm">
-                    <Form.Check className="custom-switch" type="switch" id="custom-switch-daylight" value="" name="daylight" checked disabled label={<span> <img id='criteriaimg' src={dogDay}/> I want to go out in the daylight </span>}/>
-                    <Form.Check className="custom-switch" type="switch" id="custom-switch-lowRain" value="" name="lowRain" checked={lowRainChecked} onChange={handleLowRainCheck} label={<span><img id='criteriaimg' src={dogRain}/> My dog doesn't like the rain </span>}/> 
-                    <Form.Check className="custom-switch" type="switch" id="custom-switch-noCold" value="" name="noCold" checked={noColdChecked} onChange={handleNoColdCheck} label={<span><img id='criteriaimg' src={dogSnow}/>My dog is sensitive to cold (min + 4°c / 39°f)  </span>}/>
-                    <Form.Check className="custom-switch" type="switch" id="custom-switch-noHeat" value="" name="noHeat" checked={noHeatChecked} onChange={handleNoHeatCheck} label={<span><img id='criteriaimg' src={dogSun}/> My dog can't stand heat (max + 25°c / 77°f) </span>}/>
+                    <Form.Check 
+                        className="custom-switch" 
+                        type="switch" 
+                        id="custom-switch-daylight"
+                        value="" 
+                        name="daylight" 
+                        checked 
+                        disabled 
+                        label={<span> <img className='criteriaimg' src={dogDay}/> I want to go out in the daylight </span>}/>
+                    <Form.Check 
+                        className="custom-switch" 
+                        type="switch" 
+                        id="custom-switch-lowRain" 
+                        value=""  
+                        name="lowRain" 
+                        checked={lowRainChecked} 
+                        onChange={handleLowRainCheck} 
+                        label={<span><img className='criteriaimg' src={dogRain}/> My dog doesn't like the rain </span>}/> 
+                    <Form.Check 
+                        className="custom-switch" 
+                        type="switch" 
+                        id="custom-switch-noCold" 
+                        value="" 
+                        name="noCold" 
+                        checked={noColdChecked} 
+                        onChange={handleNoColdCheck} 
+                        label={<span><img className='criteriaimg' src={dogSnow}/>My dog is sensitive to cold (min + 4°c / 39°f)  </span>}/>
+                    <Form.Check 
+                        className="custom-switch" 
+                        type="switch" 
+                        id="custom-switch-noHeat" 
+                        value="" 
+                        name="noHeat" 
+                        checked={noHeatChecked} 
+                        onChange={handleNoHeatCheck} 
+                        label={<span><img className='criteriaimg' src={dogSun}/> My dog can't stand heat (max + 25°c / 77°f) </span>}/>
                 </Form>
              </div>
+             
             <Button id='searchButton' type='button' variant="outline-light" onClick={search}>Ask Billie !</Button>
         </div>
     );

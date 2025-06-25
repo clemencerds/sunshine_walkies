@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
 import SunshineTimeline from '../SunshineTimeline/SunshineTimeline';
 import './Results.css'
-// import MyMap from '../../util/GoogleMaps';
 
 
 function Results ({results, date, name, lowRainChecked, noColdChecked, noHeatChecked}) {

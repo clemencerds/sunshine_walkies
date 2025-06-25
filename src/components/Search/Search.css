@@ -1,7 +1,4 @@
 .search {
-    /* background-color:darkblue; */
-    /* background-color: rgb(45, 107, 107); */
-    /* color: palevioletred; */
     background-color: #3f93b4;;
     color:white;
     display: flex;
@@ -12,14 +9,12 @@
     justify-content: space-evenly;
     padding: 2rem;
     align-items: center;
-   
 }
 
 
 h2 {
     font-size: 1.2rem;
     padding-bottom: 1rem;
-    
 }
 
 .preferencesForm {
@@ -29,15 +24,10 @@ h2 {
     gap: 0.9rem;
 }
 
-#criteriaimg {
+.criteriaimg {
     height: 2rem;
     width: 2rem;
 }
-
-/* #askBillie {
-    height: 2rem;
-    width: 2rem;
-} */
 
 #searchButton {
     display: flex;
@@ -45,8 +35,8 @@ h2 {
     align-items: center;
 }
 
-@media only screen and (min-width: 900px) {
 
+@media only screen and (min-width: 950px) {
 .custom-switch .form-check-input {
     width: 2.2rem;
     height: 1.1rem;

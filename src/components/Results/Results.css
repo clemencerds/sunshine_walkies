@@ -22,7 +22,18 @@ p {
     margin-bottom: 3rem;
 }
 
-@media only screen and (max-width: 800px) {
+.timeSlots {
+    white-space: pre-line;
+}
+@media only screen and (max-width: 1130px) {
+    .results {
+        margin-left: 3rem;
+        margin-right: 3rem;
+        margin-top: 3rem;
+    }
+}
+
+@media only screen and (max-width: 950px) {
     .results {
         margin-left: 1rem;
         margin-right: 1rem;

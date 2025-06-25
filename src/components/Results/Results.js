@@ -116,7 +116,7 @@ function Results ({results, date, name, lowRainChecked, noColdChecked, noHeatChe
             
             resultArray.push(`${start?.getHours()}:${start?.getMinutes() > 0 ? start?.getMinutes() : '00'} and ${end?.getHours()}:${end?.getMinutes()  > 0 ? end?.getMinutes() : '00'}`)
             
-            return `Ideally, you and ${name} should go out between ${resultArray.join(" OR between ")}`
+            return `Ideally you and ${name} should go out between ${resultArray.join(" \n or between ")}`;
     
             
         }
@@ -132,7 +132,7 @@ function Results ({results, date, name, lowRainChecked, noColdChecked, noHeatChe
             </div>
 
             <div>
-                <p>
+                <p className='timeSlots'>
                     {lowRainChecked && !noColdChecked && !noHeatChecked && timeSlots(sunAndLowRain)}
                     {noColdChecked && !lowRainChecked && !noHeatChecked && timeSlots(sunAndNoCold)}
                     {noHeatChecked && !lowRainChecked && !noColdChecked && timeSlots(sunAndNoHeat)}

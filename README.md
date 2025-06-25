@@ -20,10 +20,12 @@ Search for weather details on a given location and date:
 - the date of the search can be any date within the next 14 days on the day of the search
 
 - the main criteria for the search are daylight hours. This cannot be changed by the user
-- 3 criteria are implemented and can be selected, or not, by the user: 
+- 3 criteria are implemented. THe user can select one or all of them according to his and his dog's needs : 
   * chance of rain <20%
   * temperature > 0°c
   * temperature < 25°c
+
+<img src={screenshot-search}/>
     
 - the search results display time slots within daylight hours for the given day and location during which they can take the best dog walks according to their criteria.
     

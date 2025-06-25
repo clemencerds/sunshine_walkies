@@ -1,9 +1,8 @@
-const key = 'a169e3e94ab84c309e2125232251202';
 
 const WeatherApi = {
 
     search({location, date}) {
-        return fetch(`https://api.weatherapi.com/v1/forecast.json?key=${key}&q=${location}&dt=${date}`,
+        return fetch(`https://api.weatherapi.com/v1/forecast.json?key=${process.env.REACT_APP_API_KEY}&q=${location}&dt=${date}`,
             { headers: {
                 accept: 'application/json'}
             }

@@ -2,20 +2,36 @@
 
 This project is an application allowing users to search on a specific day and location when the best conditions for a dog walk are depending on personalized criteria.
 
+## How to start project
+
+At the root of the repository, on the main branch :
+
+- `npm i`to install dependencies
+- `npm run dev` to run development server
+
+
+## Main languages, libraries & frameworks used 
+
+- Git & GitHub
+- React
+- Bootstrap
+- Netlify
+
+
+## Code editor
+
+Visual Studio Code
+
+
 ## Purpose of the project
 
 The purpose of this project was to practice and solidify my knowledge of React and API calls among other technologies. Having had some difficulties building web apps with API calls I wanted to build a project with a basic weather API to really understand and master the use of APIs. 
 I also wanted to build the perfect app that would be useful for me, as a dog owner, as well as for all the dog owners I meet every day who struggle finding the best time to walk their dogs during the day regarding weather conditions specific to dog owners and dogs safety.
 
-## Technologies used
-- **React**: building a multi-component web app using pros and hooks
-- **WeatherApi**: REST API, asynchronous functions and HTTP requests
-- **CSS modules**: modular approach for component-specific design. Responsive design. Design the best user experience
-- **Bootstrap** : design functional, clean and easy components for the best user experience
-- **Git and Github**: version control and project hosting
-- **Netlify**: project hosting
 
-## Features
+
+## Features done
+
 Search for weather details on a given location and date:
 - the user can enter a location using the name of a city anywhere in the world or GPS coordinates
 - the date of the search can be any date within the next 14 days on the day of the search
@@ -38,7 +54,7 @@ Then the results display time slots within daylight hours for the given day and 
 ![Results with 2 criteria](README-assets/screenshot-results-2criteria.png)
 
 
-## Browser support
+## Browser support (& tradeoff)
 
 Tested on
 - Latest Chrome and Firefox
